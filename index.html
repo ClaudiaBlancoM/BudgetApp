@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Presupuesto</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Presupuesto -->
+          <div class="total-amount-container">
+            <h3>PRESUPUESTO</h3>
+            <p class="hide error" id="budget-error">
+              Monto no puede ser negativo ni vacío
+            </p>
+            <input
+              type="number"
+              id="total-amount"
+              placeholder="Ingresar monto"
+            />
+            <button class="submit" id="total-amount-button">Guardar</button>
+          </div>
+
+          <!-- gastos -->
+          <div class="user-amount-container">
+            <h3>GASTOS</h3>
+            <p class="hide error" id="product-title-error">
+              Montos no pueden estar vacíos
+            </p>
+            <input
+              type="text"
+              class="product-title"
+              id="product-title"
+              placeholder="Descripción"
+            />
+            <input
+              type="number"
+              id="user-amount"
+              placeholder=" Monto gastado "
+            />
+            <button class="submit" id="check-amount">Ingresar gastos</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output-container flex-space">
+          <div>
+            <p>TOTAL PRESUPUESTO</p>
+            <span id="amount">0</span>
+          </div>
+          <div>
+            <p>GASTOS</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>BALANCE</p>
+            <span id="balance-amount">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+        <h3><center>DETALLE DE LOS GASTOS</center></h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
